@@ -1,31 +1,22 @@
 #projects-container {
   font-family: 'Roboto', sans-serif;
+}
+
+#projects-container > .BG {
+  position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   background-color: #212931;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(255, 255, 255, 0.144)), url(../../assets/images/projectsBG.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll, scroll, scroll;
   z-index: -1;
+
 }
-
-// #projects-container > .BG {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   top: 0;
-//   left: 0;
-//   background-color: #212931;
-//   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(255, 255, 255, 0.144)), url(../../assets/images/projectsBG.jpg);
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-attachment: fixed;
-//   z-index: -1;
-
-// }
 
 a:hover {
   color: rgb(44, 195, 239);
@@ -33,18 +24,16 @@ a:hover {
 
 
 .main-wraper {
-  // background-color: #ffffff;
+  background-color: #ffffff;
   position: relative;
   z-index: 2;
   margin: 0 auto;
 }
 
 .best-project-wraper {
-  background-color: #ffffff;
   flex-flow: column;
   padding: 4rem 2rem 2rem 2rem;
   text-align: center;
-  margin-bottom: 5rem;
 }
 
 .best-project-title {
@@ -99,6 +88,7 @@ a:hover {
       box-sizing: border-box;
       padding: 4rem;
       width: 50%;
+      background-color: #ffffff;
   }
   .project-wraper img {
       margin: 2rem 0;
