@@ -3,7 +3,7 @@
   <div class="main-wraper">
     <article class="best-project-wraper">
       <header class="best-project-header-container">
-        <h1><a href="#" class="best-project-title">Angular with django reast framework</a></h1>
+        <h1><a href="#" (click)="onClick()" class="best-project-title">Angular with django reast framework</a></h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.</p>
       </header>
       <div class="project-image-div">
@@ -16,7 +16,9 @@
       </ul>
     </article>
 
-    <app-project></app-project>
+    <ng-template appPlaceholder></ng-template>
+
+    <app-project (click)="onClick()"></app-project>
 
   </div>
   <div class="BG"></div>
