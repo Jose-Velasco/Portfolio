@@ -9,7 +9,6 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  // tempProjectClicked: boolean = false;
   @ViewChild(PlaceholderDirective) projectInfoModalHost: PlaceholderDirective;
   private closeSub: Subscription;
 
@@ -19,20 +18,20 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   onClick():void {
-    console.log("modal clicked!!");
     this.showProjectInfoModal("modal clicked!!");
   }
 
   private showProjectInfoModal(message: string): void {
-    // this.tempProjectClicked = !this.tempProjectClicked;
     const projectInfoModalCmpFactory = this.componentFactoryResolver.resolveComponentFactory(
       ProjectInfoModalComponent
     );
     const hostViewContainerRef = this.projectInfoModalHost.viewContainerRef;
+    // this is used to clear the content that was rendered before
     hostViewContainerRef.clear();
 
     const componentRef = hostViewContainerRef.createComponent(projectInfoModalCmpFactory);
 
+    // use .instance to access to the properties of the modal to be able to assign values
     componentRef.instance.message = "This is from comonpnetRef instance";
     this.closeSub = componentRef.instance.close.subscribe(() => {
       this.closeSub.unsubscribe();

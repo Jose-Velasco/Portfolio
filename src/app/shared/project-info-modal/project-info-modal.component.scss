@@ -4,19 +4,47 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.75);
   z-index: 50;
+  animation-name: darking;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes darking {
+  from { background: rgba(0, 0, 0, 0); }
+  to {background: rgba(0, 0, 0, 0.50);}
 }
 
 .project-info-box {
+  visibility: hidden;
   position: fixed;
-  top: 30vh;
-  left: 20vw;
-  width: 60vw;
+  top: 0;
+  width: 80vw;
+  height: 100vh;
   padding: 16px;
   z-index: 100;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  animation-name: modal-open;
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes modal-open {
+  from {
+    visibility: hidden;
+    right: -15vw;
+    // transform: scaleX(0.85);
+    opacity: 0.8;
+  }
+  to {
+    visibility: visible;
+    right: 0vw;
+    // transform: scaleX(1);
+    opacity: 1;
+  }
 }
 
 .project-info-box-actions {
