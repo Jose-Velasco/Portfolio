@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ProjectComponent } from './project/project.component';
 import { ProjectInfoModalComponent } from './shared/project-info-modal/project-info-modal.component';
 import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PlaceholderDirective } from './shared/placeholder/placeholder.directive
     HomeComponent,
     ProjectComponent,
     ProjectInfoModalComponent,
-    PlaceholderDirective
+    PlaceholderDirective,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
