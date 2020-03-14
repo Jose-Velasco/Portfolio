@@ -1,3 +1,5 @@
+@import "../app.component.scss";
+
 #projects-container {
   font-family: 'Roboto', sans-serif;
 }
@@ -19,7 +21,7 @@
 }
 
 a:hover {
-  color: rgb(44, 195, 239);
+  color: $color-blue;
 }
 
 

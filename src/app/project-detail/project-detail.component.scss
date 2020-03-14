@@ -1,0 +1,57 @@
+@import "../app.component.scss";
+
+.project-detail-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.35)
+}
+
+.project-title-wraper {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    margin: 0;
+  }
+  .project-title {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+}
+
+.project-tech-icons-wraper {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image-wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-height: 50vh;
+  }
+}
+
+.project-about-text-container {
+  overflow: auto;
+}
+
+.project-code-btn-wraper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    margin: 1rem;
+  }
+}

@@ -1,3 +1,5 @@
+@import "../../app.component.scss";
+
 .back-drop {
   position: fixed;
   top: 0;
@@ -21,21 +23,24 @@
   top: 0;
   width: 80vw;
   height: 100vh;
-  padding: 16px;
+  // padding: 16px;
   z-index: 100;
   background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   animation-name: modal-open;
-  animation-duration: 0.5s;
+  animation-duration: 0.8s;
   animation-delay: 0.2s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+  background-image: url("../../../assets/images/projectsBG.jpg");
+  background-size: cover;
+  background-repeat: repeat;
 }
 
 @keyframes modal-open {
   from {
     visibility: hidden;
-    right: -15vw;
+    right: -25vw;
     // transform: scaleX(0.85);
     opacity: 0.8;
   }
