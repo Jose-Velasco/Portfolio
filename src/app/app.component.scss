@@ -1,9 +1,10 @@
 $color-blue: rgb(44, 195, 239);
-$color-primary-text: #212931;
+$color-primary-text: #000000;
+$color-secondary-text: #212931;
 $color-primary-border: #eeeeee;
 
 .devicon {
-  max-width: 5rem;
+  max-width: 5.5rem;
 }
 
 .project-code-btn-wraper {
@@ -32,4 +33,35 @@ $color-primary-border: #eeeeee;
 
 .display-code-btn {
   padding: 0 2.10rem;
+}
+
+.btn-round {
+  background-color: transparent;
+  // box-shadow: inset 0 0 0 2px #212931;
+  border: 2px solid #212931;
+  border-radius: 50%;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #212931;
+  font-weight: bold;
+  cursor: pointer;
+  height: 10rem;
+  width: 10rem;
+}
+
+.btn-round:hover {
+  // box-shadow: inset 0 0 0 2px rgb(44, 195, 239);
+  border: 2px solid $color-blue;
+  color: $color-blue;
+}
+
+.btn-round::-moz-focus-inner {
+  border: 0;
+  color: $color-blue;
+}
+
+.btn-round:focus {
+  color: $color-blue;
 }

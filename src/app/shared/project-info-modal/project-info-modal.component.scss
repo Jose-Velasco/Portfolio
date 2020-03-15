@@ -53,5 +53,28 @@
 }
 
 .project-info-box-actions {
-  text-align: right;
+  top: 50vh;
+  left: 3vw;
+  position: fixed;
+  animation-name: action-btn-animations;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes action-btn-animations {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.btn-round {
+  color: #ffffff;
+  font-size: 2rem;
+  border-color: rgba(255, 255, 255, 0.75);
 }
