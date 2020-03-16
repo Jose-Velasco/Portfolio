@@ -1,0 +1,62 @@
+.link-tab-container {
+  display: flex;
+  flex-direction: column;
+  width: 11rem;
+}
+
+.link-tab-wraper {
+  position: relative;
+  left: -110px;
+  background-color: #0076b2;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  padding: 0rem 0rem 0rem 2rem;
+  transition: transform 2s;
+  a {
+    display: flex;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+  }
+
+  // check global scss stylesheet for linkedin icon color
+  .link-tab-icon {
+    padding: 0.25rem;
+    height: 2.5rem;
+  }
+
+  .tab-envelope {
+    color: #ffffff;
+  }
+
+  .tab-adress-card {
+    color: #ffffff;
+  }
+}
+.tab-adress-card-icon {
+  background-color: red;
+}
+
+.test-animin {
+  transition: transform 2s;
+}
+
+.link-tab-wraper:hover {
+  transform: translateX(105px);
+  // animation-name: tab-slideout;
+  // animation-duration: 1s;
+  // animation-timing-function: ease-in;
+  // animation-fill-mode: forwards;
+}
+
+// @keyframes tab-slideout {
+//   from {
+//     transform: translateX(-10%);
+//   }
+
+//   to {
+//     transform: translateX(100%);
+//   }
+// }

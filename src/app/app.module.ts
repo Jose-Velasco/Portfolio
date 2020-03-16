@@ -8,6 +8,7 @@ import { ProjectComponent } from './project/project.component';
 import { ProjectInfoModalComponent } from './shared/project-info-modal/project-info-modal.component';
 import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { LinkTabsComponent } from './shared/link-tabs/link-tabs.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
     ProjectComponent,
     ProjectInfoModalComponent,
     PlaceholderDirective,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    LinkTabsComponent,
   ],
   imports: [
     BrowserModule,
