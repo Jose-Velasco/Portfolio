@@ -74,7 +74,18 @@
 }
 
 .btn-round {
-  color: #ffffff;
   font-size: 2.5rem;
-  border-color: rgba(255, 255, 255, 0.75);
+}
+
+/* mobile mode */
+@media only screen and (max-width: 768px) {
+  // cover the whole screen
+  .project-info-box {
+    width: 100vw;
+  }
+
+  .project-info-box-actions {
+    top: 0vh;
+    left: 0vw;
+  }
 }

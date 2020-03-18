@@ -1,3 +1,5 @@
+@import "../../app.component.scss";
+
 .link-tab-container {
   display: flex;
   flex-direction: column;
@@ -11,7 +13,7 @@
   padding: 0.5rem;
   text-transform: uppercase;
   padding: 0rem 0rem 0rem 2rem;
-  transition: transform 2s;
+  transition: transform 1.5s;
   a {
     display: flex;
     color: #ffffff;
@@ -27,16 +29,32 @@
     height: 2.5rem;
   }
 
-  .tab-envelope {
-    color: #ffffff;
+  .tab-github-icon {
+    fill: #ffffff;
+    padding-left: 0.75rem;
   }
 
-  .tab-adress-card {
+  .tab-envelope-icon {
     color: #ffffff;
+    padding-left: 1rem;
+  }
+
+  .tab-adress-card-icon {
+    color: #ffffff;
+    padding-left: 0.5rem;
   }
 }
-.tab-adress-card-icon {
-  background-color: red;
+
+.link-tab-github {
+  background-color: #333333;
+}
+
+.link-tab-envelope {
+  background-color: #68b8ae;
+}
+
+.link-tab-adress-card {
+  background-color: $color-secondary-text;
 }
 
 .test-animin {

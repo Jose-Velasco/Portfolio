@@ -30,6 +30,7 @@
 .project-tech-icons-wraper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 1rem;
   justify-content: center;
   align-items: center;
@@ -69,5 +70,45 @@
 
   li {
     margin: 1rem;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .project-detail-container {
+    display: block;
+    overflow: auto;
+    padding: 1rem;
+  }
+
+  .project-title-wraper {
+    h3 {
+      font-size: 1rem;
+    }
+
+    .project-title {
+      font-size: 3rem;
+    }
+  }
+
+  .project-image-wraper {
+
+    img {
+      max-height: 70vh;
+    }
+  }
+
+  .project-about h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-about-text-container {
+    height: 20rem;
+  }
+
+  .project-code-btn-wraper {
+    li {
+      margin: 0.5rem;
+    }
   }
 }
