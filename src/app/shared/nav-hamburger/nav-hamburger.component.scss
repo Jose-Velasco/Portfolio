@@ -1,0 +1,23 @@
+@import "../../app.component.scss";
+
+.hamburger-container {
+  display: flex;
+  height: 3.7rem;
+  width: 3rem;
+  justify-content: center;
+  align-items: center;
+
+
+  i {
+    height: 50%;
+    color: $color-secondary-text;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.2s linear;
+  }
+  i:active {
+    transform: scale(120%);
+  }
+}
+
+

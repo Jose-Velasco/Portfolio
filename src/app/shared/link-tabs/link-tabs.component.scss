@@ -57,24 +57,11 @@
   background-color: $color-secondary-text;
 }
 
-.test-animin {
-  transition: transform 2s;
-}
+// .test-animin {
+//   transition: transform 2s;
+// }
 
 .link-tab-wraper:hover {
   transform: translateX(105px);
-  // animation-name: tab-slideout;
-  // animation-duration: 1s;
-  // animation-timing-function: ease-in;
-  // animation-fill-mode: forwards;
+
 }
-
-// @keyframes tab-slideout {
-//   from {
-//     transform: translateX(-10%);
-//   }
-
-//   to {
-//     transform: translateX(100%);
-//   }
-// }

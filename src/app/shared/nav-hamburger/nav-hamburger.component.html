@@ -1,0 +1,6 @@
+<div (click)="onClick()" class="hamburger-container">
+  <i class="fa" *ngIf="isToggled; else elseBlock">&#xf00d;</i>
+  <ng-template #elseBlock>
+    <i class="fa">&#xf0c9;</i>
+  </ng-template>
+</div>

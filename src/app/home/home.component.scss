@@ -138,6 +138,57 @@ a:hover {
   .articles-wraper {
       text-align: center;
   }
+  .nav-hamburger-wraper {
+    position: fixed;
+    background-color: $color-blue;
+    background: radial-gradient(circle, rgba(44,195,239,1) 0%, rgba(255,255,255,0) 100%);
+    top: 0vh;
+    right: 0vw;
+    z-index: 1;
+  }
+
+  .hamburger-backdrop {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: $color-blue;
+    background: radial-gradient(circle,
+     rgba(44,195,239,0.8239495627352503) 0%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+    animation-name: hamburger-backdrop-open;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+
+    a {
+      text-decoration: none;
+      color: $color-secondary-text;
+    }
+
+    .hamburger-link-wraper {
+      display: flex;
+      flex-direction: row;
+
+      i {
+        padding: 0.5rem;
+        text-align: center;
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  @keyframes hamburger-backdrop-open {
+    from {
+      opacity: 0.5;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 .project-code-btn-wraper {

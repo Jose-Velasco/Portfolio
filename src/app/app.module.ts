@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { LayoutModule } from '@angular/cdk/layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { ProjectInfoModalComponent } from './shared/project-info-modal/project-i
 import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { LinkTabsComponent } from './shared/link-tabs/link-tabs.component';
+import { NavHamburgerComponent } from './shared/nav-hamburger/nav-hamburger.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { LinkTabsComponent } from './shared/link-tabs/link-tabs.component';
     PlaceholderDirective,
     ProjectDetailComponent,
     LinkTabsComponent,
+    NavHamburgerComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
