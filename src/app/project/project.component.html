@@ -1,21 +1,21 @@
 <div class="articles-wraper">
 
-  <article class="project-wraper">
+  <article *ngFor="let project of projects; let i = index;" class="project-wraper">
       <header class="project-header-container">
-        <h1><a href="#" class="project-title">Angular with django reastframework</a></h1>
+        <h1 class="project-title">{{ project.title }}</h1>
       </header>
       <div class="project-image-div">
-        <img src="../../assets/images/aboutheader.jpg" class="best-project-image" alt="">
+      <img [src]="project.picture" class="best-project-image" alt="">
       </div>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.</p>
+      <p>{{ project.abstract }}</p>
       <ul class="project-code-btn-wraper">
         <li>
-          <a href="#" class="display-code-btn">View Project</a>
+          <a (click)="onViewProject(i)" class="display-code-btn">View Project</a>
         </li>
       </ul>
   </article>
 
-  <article class="project-wraper">
+  <!-- <article class="project-wraper">
       <header class="project-header-container">
         <h1><a href="#" class="project-title">Angular with django reastframework</a></h1>
       </header>
@@ -58,6 +58,6 @@
           <a href="#" class="display-code-btn">View Project</a>
         </li>
       </ul>
-</article>
+</article> -->
 
 </div>
