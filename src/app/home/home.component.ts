@@ -79,6 +79,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     this.mobileViewSub.unsubscribe();
+    this.onProjectSelectedSub.unsubscribe();
   }
 
 }
