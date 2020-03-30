@@ -9,17 +9,19 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./project-detail.component.scss']
 })
 export class ProjectDetailComponent implements OnInit, OnDestroy {
-  projects: Project[] = [];
+  projectDetails: Project;
   ProjectSelectedIndex: number;
   private projectSelectedSub: Subscription;
   constructor(private projectService: ProjectsService) { }
 
   ngOnInit(): void {
-    this.projects = this.projectService.getProjects();
+    // this.projects = this.projectService.getProjects();
     this.projectSelectedSub = this.projectService.projectSelectedObserv
       .subscribe((index: number) => {
         this.ProjectSelectedIndex = index;
+        this.projectDetails = this.projectService.getProjectByIndex(this.ProjectSelectedIndex);
         console.log("index slected:  ", index);
+        console.log("project slected:  ", this.projectDetails);
       });
   }
 

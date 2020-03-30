@@ -6,16 +6,16 @@ import { Observable, BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ProjectsService {
-  public projectSelected = new BehaviorSubject<number>(0);
+  public projectSelected = new BehaviorSubject<number>(null);
   public techIconDic: {[index: string]: string} = {
     python: "../../assets/svgs/python.svg",
     git: "../../assets/svgs/git.svg",
   };
   private projects: Project[] = [
     new Project(
-      true, false, "@@@@@Angular with django reast framework",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
-      "../../assets/images/aboutheader.jpg",
+      true, false, "@@@@@Angular with django reast framework@@@",
+      "Walrus, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      "../../assets/images/projectsBG.jpg",
       "#",
       [
         this.techIconDic["python"],
@@ -55,8 +55,11 @@ export class ProjectsService {
       "#",
       [
         this.techIconDic["python"],
+        this.techIconDic["git"],
+        this.techIconDic["git"],
+        this.techIconDic["git"],
       ],
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      "WalrusWalrusWalrusWalrus,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
       "#",
       "#"
     )
@@ -64,6 +67,10 @@ export class ProjectsService {
 
   get projectSelectedObserv(): Observable<number> {
     return this.projectSelected.asObservable();
+  }
+
+  getProjectByIndex(index: number): Project {
+    return this.projects[index];
   }
 
   onProjectSelected(projectIndex: number): void {

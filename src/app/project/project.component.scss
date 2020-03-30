@@ -15,8 +15,9 @@ a:hover {
   }
 
   .project-image-div {
-      width: 70%;
-      margin: 4rem 0;
+      width: auto;
+      max-height: 25rem;
+      margin: 2rem 0;
   }
 
   .display-code-btn {
@@ -41,6 +42,7 @@ a:hover {
       margin: 2rem 0;
       display: block;
       width: 100%;
+      height: 100%;
   }
   /* make the content seperator borders */
   .articles-wraper article:nth-child(-n + 2) {

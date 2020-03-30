@@ -3,6 +3,7 @@ import { ProjectInfoModalComponent } from '../shared/project-info-modal/project-
 import { PlaceholderDirective } from '../shared/placeholder/placeholder.directive';
 import { Subscription } from 'rxjs';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { ProjectsService } from '../services/projects.service';
 
 @Component({
   selector: 'app-home',
@@ -15,10 +16,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   @ViewChild(PlaceholderDirective) projectInfoModalHost: PlaceholderDirective;
   private closeSub: Subscription;
   private mobileViewSub: Subscription;
+  private onProjectSelectedSub: Subscription;
 
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver,
-    private breakpointObserver: BreakpointObserver) { }
+    private breakpointObserver: BreakpointObserver,
+    private projectsService: ProjectsService) { }
 
   ngOnInit(): void {
     // used to check when the screen view changes from desktop to mobile
@@ -32,6 +35,16 @@ export class HomeComponent implements OnInit, OnDestroy {
           this.isMobileView = false;
         }
       })
+
+      // when a projects is selected for viewing open modal
+      this.onProjectSelectedSub = this.projectsService.projectSelectedObserv
+        .subscribe((projectIndex: number) => {
+          if (projectIndex != null) {
+            this.onClick();
+          }
+      })
+
+
   }
 
   onToggleHamburger(clickEvent: boolean):void {
