@@ -3,8 +3,9 @@
 .project-detail-container {
   height: 100%;
   display: flex;
+  overflow: auto;
   flex-direction: column;
-  padding: 2.5rem;
+  padding: 1rem;
   background-color: rgba(255, 255, 255, 0.4);
   box-shadow: inset 0px 0px 15px 5px $color-blue;
 }
@@ -20,7 +21,7 @@
   }
   .project-title {
     color: $color-primary-text;
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
     text-align: center;
@@ -31,7 +32,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  // padding: 1rem;
   justify-content: center;
   align-items: center;
 
@@ -59,9 +59,9 @@
   color: $color-primary-text;
   font-size: 1.25rem;
   letter-spacing: 0.03rem;
-  line-height: 1.30rem;
+  line-height: 1.5rem;
   overflow: auto;
-  height: 10rem;
+  min-height: 15rem;
 }
 
 .project-code-btn-wraper {
@@ -69,7 +69,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 
   li {
@@ -78,11 +78,9 @@
 }
 
 // desktop view
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .project-detail-container {
     display: block;
-    overflow: auto;
-    padding: 1rem;
   }
 
   .project-title-wraper {
@@ -106,9 +104,9 @@
     font-size: 1.5rem;
   }
 
-  .project-about-text-container {
-    height: 20rem;
-  }
+  // .project-about-text-container {
+  //   height: 20rem;
+  // }
 
   .project-code-btn-wraper {
     li {

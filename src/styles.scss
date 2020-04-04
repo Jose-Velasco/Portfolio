@@ -10,3 +10,8 @@ body {
   .cls-1 {fill: #fff}
   .cls-2{fill:#0076b2;}
 }
+
+// used when modal is open to remove the main body scroll bar
+.ovh {
+  overflow: hidden;
+}

@@ -20,8 +20,8 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
       .subscribe((index: number) => {
         this.ProjectSelectedIndex = index;
         this.projectDetails = this.projectService.getProjectByIndex(this.ProjectSelectedIndex);
-        console.log("index slected:  ", index);
-        console.log("project slected:  ", this.projectDetails);
+        // console.log("index slected:  ", index);
+        // console.log("project slected:  ", this.projectDetails);
       });
   }
 
