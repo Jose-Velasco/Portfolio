@@ -5,7 +5,7 @@ export class Project {
     public title: string,
     public abstract: string,
     public picture: string,
-    public video: string,
+    public videoId: string,
     public techIcons: string[],
     public about: string,
     public demo: string,

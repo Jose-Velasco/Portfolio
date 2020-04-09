@@ -37,10 +37,12 @@ export class ProjectsService {
       "#"
     ),
     new Project(
-      false, false, "Angular with django reast framework",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      false,
+      true,
+      "Angular with django reast framework",
+      "VIDEOLorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
       "../../assets/images/aboutheader.jpg",
-      "#",
+      "5bWv0UDPgh0",
       [
         this.techIconDic["python"],
       ],

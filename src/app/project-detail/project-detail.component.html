@@ -6,9 +6,22 @@
   <div class="project-tech-icons-wraper">
     <img class="devicon" *ngFor="let icon of projectDetails.techIcons" [src]="icon">
   </div>
-  <div class="project-image-wraper">
+  <div *ngIf="!projectDetails.hasVideo; else displayVideo" class="project-image-wraper">
     <img [src]="projectDetails.picture">
   </div>
+  <div *ngIf="isLoading">
+    <div class="fa-3x">
+      <i class="fa fa-spinner fa-pulse"></i>
+    </div>
+  </div>
+  <ng-template #displayVideo>
+    <div class="project-video-wraper">
+      <iframe width="420" height="315"
+      [src]="videoURL | safe" frameBorder="0" allowfullscreen>
+      Browser not compatable.
+      </iframe>
+    </div>
+  </ng-template>
   <div class="project-about">
     <h2>About</h2>
   </div>

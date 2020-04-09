@@ -11,6 +11,7 @@ import { PlaceholderDirective } from './shared/placeholder/placeholder.directive
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { LinkTabsComponent } from './shared/link-tabs/link-tabs.component';
 import { NavHamburgerComponent } from './shared/nav-hamburger/nav-hamburger.component';
+import { SafePipePipe } from './shared/pipes/safe-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NavHamburgerComponent } from './shared/nav-hamburger/nav-hamburger.comp
     ProjectDetailComponent,
     LinkTabsComponent,
     NavHamburgerComponent,
+    SafePipePipe,
   ],
   imports: [
     BrowserModule,
