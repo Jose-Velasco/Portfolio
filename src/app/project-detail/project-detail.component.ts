@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./project-detail.component.scss']
 })
 export class ProjectDetailComponent implements OnInit, OnDestroy {
-  isLoading: boolean;
+  isLoading: boolean = true;
   videoURL: string;
   projectDetails: Project;
   ProjectSelectedIndex: number;
@@ -17,7 +17,6 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
   constructor(private projectService: ProjectsService,) { }
 
   ngOnInit(): void {
-    this.isLoading = true;
     this.projectSelectedSub = this.projectService.projectSelectedObserv
       .subscribe((index: number) => {
         this.ProjectSelectedIndex = index;

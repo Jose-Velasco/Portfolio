@@ -51,6 +51,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.isHamburgerToggled = clickEvent;
   }
 
+  onClickFeaturedProject() {
+    this.projectsService.firstFeaturedProjectIndex();
+  }
+
   onClick():void {
     this.showProjectInfoModal("modal clicked!!");
   }

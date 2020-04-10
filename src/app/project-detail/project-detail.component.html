@@ -1,7 +1,7 @@
 <div class="project-detail-container">
   <div class="project-title-wraper">
     <h3>Project</h3>
-  <h1 class="project-title">{{ projectDetails.title }}</h1>
+  <h1 class="project-title">{{ projectDetails.uniqueTitle }}</h1>
   </div>
   <div class="project-tech-icons-wraper">
     <img class="devicon" *ngFor="let icon of projectDetails.techIcons" [src]="icon">

@@ -14,10 +14,24 @@ export class ProjectComponent implements OnInit {
     private projectService: ProjectsService) { }
 
   ngOnInit(): void {
-    this.projects = this.projectService.getProjects();
+    this.initializeUnFeaturedProjects();
   }
 
-  onViewProject(projectIndex: number): void {
+  initializeUnFeaturedProjects(): void {
+    const allProjects: Project[] = this.projectService.getProjects();
+    const lenOfProjects: number = allProjects.length;
+    for(let i = 0; i < lenOfProjects; i++) {
+      if(!allProjects[i].isFeatured) {
+        this.projects.push(allProjects[i]);
+      }
+    }
+  }
+
+  onViewProject(projectUniqueTitle: string): void {
+    const allProjects: Project[] = this.projectService.getProjects();
+    let projectIndex: number = allProjects.findIndex(
+      project => project.uniqueTitle === projectUniqueTitle
+      );
     this.projectService.onProjectSelected(projectIndex);
   }
 

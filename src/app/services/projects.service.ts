@@ -11,48 +11,55 @@ export class ProjectsService {
     python: "../../assets/svgs/python.svg",
     git: "../../assets/svgs/git.svg",
   };
+
+  constructor() { }
+
   private projects: Project[] = [
     new Project(
-      true, false, "@@@@@Angular with django reast framework@@@",
-      "Walrus, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      true,
+      false,
+      "@@@@@Angular with BEST PROJECT EVER django reast framework",
+      "BEST PROJECTWalrus, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
       "../../assets/images/projectsBG.jpg",
       "#",
       [
         this.techIconDic["python"],
       ],
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
-      "#",
-      "#"
-    ),
-    new Project(
-      false, false, "Angular with django reast framework",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
-      "../../assets/images/aboutheader.jpg",
-      "#",
-      [
-        this.techIconDic["python"],
-      ],
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      "BEST PROJECTBEST PROJECTLorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
       "#",
       "#"
     ),
     new Project(
       false,
       true,
-      "Angular with django reast framework",
-      "VIDEOLorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      "Angular with NATUREVIDEO",
+      "NatureVideoABSABS!!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      "../../assets/images/aboutheader.jpg",
+      "lM02vNMRRB0",
+      [
+        this.techIconDic["python"],
+      ],
+      "NatureVideoLorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      "#",
+      "#"
+    ),
+    new Project(
+      false,
+      true,
+      "Angular with KASSSIDIN",
+      "KASSIDINABSABSABSLorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
       "../../assets/images/aboutheader.jpg",
       "5bWv0UDPgh0",
       [
         this.techIconDic["python"],
       ],
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      "KASSIDINLorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
       "#",
       "#"
     ),
     new Project(
-      false, false, "!!!!!1Angular with django reast framework",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      false, false, "!!!!!1Angular with PICTURE",
+      "REULARPICTURELorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
       "../../assets/images/aboutheader.jpg",
       "#",
       [
@@ -67,6 +74,17 @@ export class ProjectsService {
     )
   ];
 
+  firstFeaturedProjectIndex(): void {
+    for(let index = 0; index < this.projects.length; index++) {
+      if (this.projects[index].isFeatured) {
+        this.projectSelected.next(index);
+      }
+    }
+
+    // returns null if not a best project in arry
+    return null;
+  }
+
   get projectSelectedObserv(): Observable<number> {
     return this.projectSelected.asObservable();
   }
@@ -78,8 +96,6 @@ export class ProjectsService {
   onProjectSelected(projectIndex: number): void {
     this.projectSelected.next(projectIndex);
   }
-
-  constructor() { }
 
   getProjects(): Project[] {
     return this.projects;

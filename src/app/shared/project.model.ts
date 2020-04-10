@@ -2,7 +2,7 @@ export class Project {
   constructor(
     public isFeatured: boolean,
     public hasVideo: boolean,
-    public title: string,
+    public uniqueTitle: string,
     public abstract: string,
     public picture: string,
     public videoId: string,

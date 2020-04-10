@@ -115,6 +115,17 @@
     }
   }
 
+  .project-video-wraper {
+    margin: auto;
+    width: 74%;
+    padding-bottom: 46.25%;
+  }
+
+  .project-video-wraper iframe {
+    height: 90%;
+  }
+
+
   .project-about h2 {
     font-size: 1.5rem;
   }
@@ -124,6 +135,7 @@
   // }
 
   .project-code-btn-wraper {
+    vertical-align: middle;
     li {
       margin: 0.5rem;
     }
