@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef, AfterViewInit } from '@angular/core';
 import { Project } from '../shared/project.model';
 import { ProjectsService } from '../services/projects.service';
 import { Subscription } from 'rxjs';
@@ -14,7 +14,9 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
   projectDetails: Project;
   ProjectSelectedIndex: number;
   private projectSelectedSub: Subscription;
-  constructor(private projectService: ProjectsService,) { }
+  constructor(
+    private projectService: ProjectsService,
+    private ref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.projectSelectedSub = this.projectService.projectSelectedObserv
