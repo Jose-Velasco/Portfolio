@@ -22,9 +22,7 @@ export class ProjectsService {
 
   private projects: Project[] = [
     new Project(
-      true,
-      false,
-      "FlashDek",
+      true, false, "FlashDek",
       "Android Flashcard App - TypeScript, Python, Angular, Django, NativeScript, HTML, CSS, Ubuntu, Postman",
       "../../assets/images/projectsBG.jpg",
       "#",
@@ -38,9 +36,7 @@ export class ProjectsService {
       "https://github.com/Jose-Velasco/ns_ng_Flashcard_app"
     ),
     new Project(
-      false,
-      false,
-      "Gavilan Computer Science Club Website",
+      false, false, "Gavilan Computer Science Club Website",
       "Club website - Python, Django, HTML, CSS, Ubuntu",
       "../../assets/images/aboutheader.jpg",
       "#",
@@ -53,31 +49,27 @@ export class ProjectsService {
       "https://github.com/Jose-Velasco/cs-club-django"
     ),
     new Project(
-      false,
-      true,
-      "Angular with KASSSIDIN",
-      "KASSIDINABSABSABSLorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      false, false, "Visual Dijkstras's Algorithm",
+      "Visualizing the shortest path in a weighted graph - TypeScript, Angular, HTML, CSS",
       "../../assets/images/aboutheader.jpg",
       "5bWv0UDPgh0",
       [
-        this.techIconDic["python"],
+        this.techIconDic.typeScript, this.techIconDic.angular, this.techIconDic.html,
+        this.techIconDic.css
       ],
-      "KASSIDINLorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      "Developed a visual representation of Dijkstra's algorithm using TypeScript and Angular. This project finds the shortest path between a start node and an end node. I incorporated the min index d-array heap data structure to enable quick decrease key operation a when quicker path is found to a node. Additionally, adjacency list where used because it consumes less space vs a adjacency matrix. I developed an algorithm that connects all nodes adjacent to each other. Also, this algorithm takes into consideration its position in the graph. For example, if a node is at the top right corner of the board it will only add an edge to the node directly underneath and left of its position. In essence, this project has allowed me to practice algorithms and data structures in a fun projects.",
       "#",
-      "#"
+      "https://github.com/Jose-Velasco/ng-Dijkstras-shortest-path-algorithm"
     ),
     new Project(
-      false, false, "!!!!!1Angular with PICTURE",
-      "REULARPICTURELorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      false, false, "Game Profile Look-up",
+      "Displays a player's stats for the game league of legends - Python, tkinter",
       "../../assets/images/aboutheader.jpg",
       "#",
       [
-        this.techIconDic["python"],
-        this.techIconDic["git"],
-        this.techIconDic["git"],
-        this.techIconDic["git"],
+        this.techIconDic.python,
       ],
-      "WalrusWalrusWalrusWalrus,Lorem ipsum dolor,Lorem ipsum dolor,Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto quo totam, necessitatibus sint tempore, minus quis doloremque tenetur nemo iste dolore culpa laboriosam quia deleniti blanditiis quas harum dolorum.",
+      "In this project I utilized the tkinter toolkit for Python to create a graphical user interface. This project has allowed me to gain an understaning of how HTTP request work by making request to a third party API. Likewise, I was able to parse thorugh JSON to view the desired statistics and data. This projects also allowed me to handle memory leaks by destroying and recycling key components. Ultimately, through this project I gain a deeper understanding of object oriented programming, Python and developing desktop applications.",
       "#",
       "#"
     )
@@ -89,10 +81,9 @@ export class ProjectsService {
     for(let index = 0; index < this.projects.length; index++) {
       if (this.projects[index].isFeatured) {
         this.projectSelected.next(index);
+        break;
       }
     }
-    // returns null if not a best project in arry
-    return null;
   }
 
   get projectSelectedObserv(): Observable<number> {

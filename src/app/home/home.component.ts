@@ -43,8 +43,6 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.onClick();
           }
       })
-
-
   }
 
   onToggleHamburger(clickEvent: boolean):void {
