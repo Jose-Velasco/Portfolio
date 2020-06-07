@@ -22,7 +22,7 @@ export class ProjectsService {
 
   private projects: Project[] = [
     new Project(
-      true, false, "FlashDek",
+      false, false, "FlashDek",
       "Android Flashcard App - TypeScript, Python, Angular, Django, NativeScript, HTML, CSS, Ubuntu, Postman",
       "../../assets/images/projectsBG.jpg",
       "#",

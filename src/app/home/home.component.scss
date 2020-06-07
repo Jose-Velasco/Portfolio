@@ -13,29 +13,11 @@
   z-index: -1;
 }
 
-// #projects-container > .BG {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   top: 0;
-//   left: 0;
-//   background-color: #212931;
-//   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(255, 255, 255, 0.144)), url(../../assets/images/projectsBG.jpg);
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-attachment: fixed;
-//   z-index: -1;
-
-// }
-
 a:hover {
   color: $color-blue;
 }
 
-
 .main-wraper {
-  // background-color: #ffffff;
   position: relative;
   z-index: 2;
   margin: 0 auto;
@@ -46,7 +28,9 @@ a:hover {
   flex-flow: column;
   padding: 4rem 2rem 2rem 2rem;
   text-align: center;
-  margin-bottom: 5rem;
+  // uncomment to add a space between the best project and the other projects
+  // or the projects's title: Projects
+  // margin-bottom: 5rem;
 }
 
 .best-project-title {
@@ -68,6 +52,28 @@ a:hover {
   line-height: 2;
 }
 
+.portfolio-header-wraper {
+  flex-flow: column;
+  padding: 4rem 0rem 2rem 0rem;
+  margin-bottom: 4rem;
+  text-align: center;
+
+  .portfolio-title-name {
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-weight: bold;
+  }
+}
+
+// handles the title for the Projects section
+.projects-title-wraper {
+  h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
 
 /* for desktop view */
 @media only screen and (min-width: 768px) {
@@ -84,6 +90,10 @@ a:hover {
 
   .best-project-wraper {
       padding: 6rem 4rem 4rem 4rem;
+  }
+
+  .projects-title-wraper {
+    padding:4rem 2rem 2rem 2rem;
   }
   .display-code-btn {
       padding: 0 2.10rem;
@@ -119,6 +129,7 @@ a:hover {
 
 /* for mobile mode code btn */
 @media only screen and (max-width: 768px) {
+
   .display-code-btn {
       width: 100%;
       padding: 0;
@@ -190,6 +201,7 @@ a:hover {
     }
   }
 }
+/* End mobile view */
 
 .project-code-btn-wraper {
   list-style: none;

@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   onClick():void {
-    this.showProjectInfoModal("modal clicked!!");
+    this.showProjectInfoModal("modal clicked");
   }
 
   private showProjectInfoModal(message: string): void {
