@@ -39,23 +39,24 @@
     <div class="link-tab-wraper" *ngIf="!isMobileView">
       <app-link-tabs></app-link-tabs>
     </div>
-    <div class="nav-hamburger-wraper" *ngIf="isMobileView">
+    <div class="nav-hamburger-wraper" *ngIf="isMobileView"
+      [ngClass]="{'nav-hamburger-wraper-remove-background-color': isHamburgerToggled}">
       <app-nav-hamburger (onToggled)="onToggleHamburger($event)"></app-nav-hamburger>
     </div>
     <div class="hamburger-backdrop" *ngIf="isMobileView && isHamburgerToggled">
-      <a href="#">
+      <a [href]="mediaLinksFromService.linkedin" target="_blank">
         <div class="hamburger-link-wraper">
           <h2>Linkedin</h2>
           <i class="fa">&#xf08c;</i>
         </div>
       </a>
-      <a href="#">
+      <a [href]="mediaLinksFromService.github" target="_blank">
         <div class="hamburger-link-wraper">
           <h2>Github</h2>
           <i class="fa">&#xf09b;</i>
         </div>
       </a>
-      <a href="#">
+      <a href="mailto:{{mediaLinksFromService.email}}">
         <div class="hamburger-link-wraper">
           <h2>E-mail</h2>
           <i class="fa">&#xf0e0;</i>

@@ -4,6 +4,8 @@ import { PlaceholderDirective } from '../shared/placeholder/placeholder.directiv
 import { Subscription } from 'rxjs';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { ProjectsService } from '../services/projects.service';
+import { MediaLinks } from '../services/media-links.service';
+import { MediaLink } from '../shared/media-link.interface';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +23,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver,
     private breakpointObserver: BreakpointObserver,
-    private projectsService: ProjectsService) { }
+    private projectsService: ProjectsService,
+    private mediaLinksServ: MediaLinks) { }
 
   ngOnInit(): void {
     // used to check when the screen view changes from desktop to mobile
@@ -43,6 +46,10 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.onClick();
           }
       })
+  }
+
+  get mediaLinksFromService(): MediaLink{
+    return this.mediaLinksServ.links;
   }
 
   onToggleHamburger(clickEvent: boolean):void {

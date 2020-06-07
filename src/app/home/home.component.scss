@@ -26,7 +26,7 @@ a:hover {
 .best-project-wraper {
   background-color: #ffffff;
   flex-flow: column;
-  padding: 4rem 2rem 2rem 2rem;
+  padding: 3rem 2rem 2rem 2rem;
   text-align: center;
   // uncomment to add a space between the best project and the other projects
   // or the projects's title: Projects
@@ -53,17 +53,21 @@ a:hover {
 }
 
 .portfolio-header-wraper {
-  flex-flow: column;
-  padding: 4rem 0rem 2rem 0rem;
-  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 36rem;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 
   .portfolio-title-name {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    margin: 0;
   }
 
   p {
     font-weight: bold;
+
   }
 }
 
@@ -83,6 +87,12 @@ a:hover {
       width: calc(100% - 4rem);
   }
 
+  .portfolio-header-wraper {
+    .portfolio-title-name {
+      font-size: 4.5rem;
+    }
+  }
+
   .project-image-div {
       width: 70%;
       margin: 4rem 0;
@@ -90,10 +100,6 @@ a:hover {
 
   .best-project-wraper {
       padding: 6rem 4rem 4rem 4rem;
-  }
-
-  .projects-title-wraper {
-    padding:4rem 2rem 2rem 2rem;
   }
   .display-code-btn {
       padding: 0 2.10rem;
@@ -156,6 +162,10 @@ a:hover {
     top: 0vh;
     right: 0vw;
     z-index: 1;
+  }
+
+  .nav-hamburger-wraper-remove-background-color {
+    background: transparent;
   }
 
   .hamburger-backdrop {

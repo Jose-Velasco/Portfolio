@@ -81,7 +81,6 @@
 }
 
 .project-code-btn-wraper {
-  padding: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -137,6 +136,7 @@
 
   .project-code-btn-wraper {
     vertical-align: middle;
+    padding: 1rem;
     li {
       margin: 0.5rem;
     }
