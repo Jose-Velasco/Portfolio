@@ -7,7 +7,7 @@
     <img class="devicon" *ngFor="let icon of projectDetails.techIcons" [src]="icon">
   </div>
   <div *ngIf="!projectDetails.hasVideo; else displayVideo" class="project-image-wraper">
-    <img [src]="projectDetails.picture">
+    <img [src]="projectDetails.thumbnailPicture">
   </div>
   <div *ngIf="isLoading">
     <div class="fa-3x">

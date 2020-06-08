@@ -24,7 +24,8 @@ export class ProjectsService {
     new Project(
       false, false, "FlashDek",
       "Android Flashcard App - TypeScript, Python, Angular, Django, NativeScript, HTML, CSS, Ubuntu, Postman",
-      "../../assets/images/projectsBG.jpg",
+      "../../assets/images/flashcardAppPic2.jpg",
+      "../../assets/images/flashcardAppPic1.jpg",
       "#",
       [
         this.techIconDic.typeScript, this.techIconDic.python, this.techIconDic.angular,
@@ -38,7 +39,8 @@ export class ProjectsService {
     new Project(
       false, false, "Gavilan Computer Science Club Website",
       "Club website - Python, Django, HTML, CSS, Ubuntu",
-      "../../assets/images/aboutheader.jpg",
+      "../../assets/images/clubSitePic2.jpg",
+      "../../assets/images/clubSitePic1.jpg",
       "#",
       [
         this.techIconDic.python, this.techIconDic.django, this.techIconDic.html,
@@ -52,6 +54,7 @@ export class ProjectsService {
       false, false, "Visual Dijkstras's Algorithm",
       "Visualizing the shortest path in a weighted graph - TypeScript, Angular, HTML, CSS",
       "../../assets/images/aboutheader.jpg",
+      "../../assets/images/aboutheader.jpg",
       "5bWv0UDPgh0",
       [
         this.techIconDic.typeScript, this.techIconDic.angular, this.techIconDic.html,
@@ -64,14 +67,15 @@ export class ProjectsService {
     new Project(
       false, false, "Game Profile Look-up",
       "Displays a player's stats for the game league of legends - Python, tkinter",
-      "../../assets/images/aboutheader.jpg",
+      "../../assets/images/leaguePic1.jpg",
+      "../../assets/images/leaguePic2.jpg",
       "#",
       [
         this.techIconDic.python,
       ],
       "In this project I utilized the tkinter toolkit for Python to create a graphical user interface. This project has allowed me to gain an understaning of how HTTP request work by making request to a third party API. Likewise, I was able to parse thorugh JSON to view the desired statistics and data. This projects also allowed me to handle memory leaks by destroying and recycling key components. Ultimately, through this project I gain a deeper understanding of object oriented programming, Python and developing desktop applications.",
-      "#",
-      "#"
+      "https://github.com/Jose-Velasco/League-Player-look-up/releases",
+      "https://github.com/Jose-Velasco/League-Player-look-up"
     )
   ];
 
