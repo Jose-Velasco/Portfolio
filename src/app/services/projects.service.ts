@@ -53,15 +53,15 @@ export class ProjectsService {
     new Project(
       false, false, "Visual Dijkstras's Algorithm",
       "Visualizing the shortest path in a weighted graph - TypeScript, Angular, HTML, CSS",
-      "../../assets/images/aboutheader.jpg",
-      "../../assets/images/aboutheader.jpg",
+      "../../assets/images/dijkstrasAlgorithmPic1.png",
+      "../../assets/images/dijkstrasAlgorithmPic2.png",
       "5bWv0UDPgh0",
       [
         this.techIconDic.typeScript, this.techIconDic.angular, this.techIconDic.html,
         this.techIconDic.css
       ],
       "Developed a visual representation of Dijkstra's algorithm using TypeScript and Angular. This project finds the shortest path between a start node and an end node. I incorporated the min index d-array heap data structure to enable quick decrease key operation a when quicker path is found to a node. Additionally, adjacency list where used because it consumes less space vs a adjacency matrix. I developed an algorithm that connects all nodes adjacent to each other. Also, this algorithm takes into consideration its position in the graph. For example, if a node is at the top right corner of the board it will only add an edge to the node directly underneath and left of its position. In essence, this project has allowed me to practice algorithms and data structures in a fun projects.",
-      "#",
+      "https://pathfinder-algorithmvisualizer.web.app/",
       "https://github.com/Jose-Velasco/ng-Dijkstras-shortest-path-algorithm"
     ),
     new Project(
