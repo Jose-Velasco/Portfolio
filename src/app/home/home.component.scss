@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
   background-color: #212931;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(255, 255, 255, 0.144)), url(../../assets/images/projectsBG.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(255, 255, 255, 0.144)), url(../../assets/images/backgroundRecompressed.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -236,15 +236,17 @@ a:hover {
   box-shadow: inset 0 0 0 2px rgb(44, 195, 239);
 }
 
-.best-project-image:hover {
-  transform: scale(1.05)
-}
+// not needed unless using featured project on top of
+// portfolio which is currently commented out in the home.html
+// .best-project-image:hover {
+//   transform: scale(1.05)
+// }
 
-.best-project-image {
-  transition: 0.2s ease-out;
-  width: 100%;
-  display: block;
-}
+// .best-project-image {
+//   transition: 2s ease-out;
+//   width: 100%;
+//   display: block;
+// }
 
 .project-image-div {
   display: inline-block;
