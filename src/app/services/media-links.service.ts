@@ -9,7 +9,7 @@ export class MediaLinks {
     linkedin: "https://www.linkedin.com/in/jose-l-velasco/",
     github: "https://github.com/Jose-Velasco",
     email: "jose.juarez.velasco@gmail.com",
-    resume: "../../assets/resume/JoseVelascoResume.pdf"
+    resume: "./assets/resume/JoseVelascoResume.pdf"
   };
 
   get links(): MediaLink {

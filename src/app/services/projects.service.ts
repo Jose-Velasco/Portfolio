@@ -8,14 +8,14 @@ import { Observable, BehaviorSubject } from 'rxjs';
 export class ProjectsService {
   public projectSelected = new BehaviorSubject<number>(null);
   public techIconDic: {[index: string]: string} = {
-    angular: "../../assets/svgs/angularjs.svg",
-    css: "../../assets/svgs/css3.svg",
-    python: "../../assets/svgs/python.svg",
-    django: "../../assets/svgs/django.svg",
-    git: "../../assets/svgs/git.svg",
-    html: "../../assets/svgs/html5.svg",
-    typeScript: "../../assets/svgs/typescript.svg",
-    ubuntu: "../../assets/svgs/ubuntu.svg",
+    angular: "./assets/svgs/angularjs.svg",
+    css: "./assets/svgs/css3.svg",
+    python: "./assets/svgs/python.svg",
+    django: "./assets/svgs/django.svg",
+    git: "./assets/svgs/git.svg",
+    html: "./assets/svgs/html5.svg",
+    typeScript: "./assets/svgs/typescript.svg",
+    ubuntu: "./assets/svgs/ubuntu.svg",
   };
 
   constructor() { }
@@ -24,8 +24,8 @@ export class ProjectsService {
     new Project(
       false, false, "FlashDek",
       "Android Flashcard App - TypeScript, Python, Angular, Django, NativeScript, HTML, CSS, Ubuntu, Postman",
-      "../../assets/images/flashcardAppPic2.jpg",
-      "../../assets/images/flashcardAppPic1.jpg",
+      "./assets/images/flashcardAppPic2.jpg",
+      "./assets/images/flashcardAppPic1.jpg",
       "#",
       [
         this.techIconDic.typeScript, this.techIconDic.python, this.techIconDic.angular,
@@ -39,8 +39,8 @@ export class ProjectsService {
     new Project(
       false, false, "Gavilan Computer Science Club Website",
       "Club website - Python, Django, HTML, CSS, Ubuntu",
-      "../../assets/images/clubSitePic2.jpg",
-      "../../assets/images/clubSitePic1.jpg",
+      "./assets/images/clubSitePic2.jpg",
+      "./assets/images/clubSitePic1.jpg",
       "#",
       [
         this.techIconDic.python, this.techIconDic.django, this.techIconDic.html,
@@ -53,8 +53,8 @@ export class ProjectsService {
     new Project(
       false, false, "Visual Dijkstras's Algorithm",
       "Visualizing the shortest path in a weighted graph - TypeScript, Angular, HTML, CSS",
-      "../../assets/images/dijkstrasAlgorithmPic1.png",
-      "../../assets/images/dijkstrasAlgorithmPic2.png",
+      "./assets/images/dijkstrasAlgorithmPic1.png",
+      "./assets/images/dijkstrasAlgorithmPic2.png",
       "5bWv0UDPgh0",
       [
         this.techIconDic.typeScript, this.techIconDic.angular, this.techIconDic.html,
@@ -67,8 +67,8 @@ export class ProjectsService {
     new Project(
       false, false, "Game Profile Look-up",
       "Displays a player's stats for the game league of legends - Python, tkinter",
-      "../../assets/images/leaguePic1.jpg",
-      "../../assets/images/leaguePic2.jpg",
+      "./assets/images/leaguePic1.jpg",
+      "./assets/images/leaguePic2.jpg",
       "#",
       [
         this.techIconDic.python,
