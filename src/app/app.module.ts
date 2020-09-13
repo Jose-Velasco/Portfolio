@@ -12,6 +12,7 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
 import { LinkTabsComponent } from './shared/link-tabs/link-tabs.component';
 import { NavHamburgerComponent } from './shared/nav-hamburger/nav-hamburger.component';
 import { SafePipePipe } from './shared/pipes/safe-pipe.pipe';
+import { TextAnimationComponent } from './shared/text-animation/text-animation.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SafePipePipe } from './shared/pipes/safe-pipe.pipe';
     LinkTabsComponent,
     NavHamburgerComponent,
     SafePipePipe,
+    TextAnimationComponent,
   ],
   imports: [
     BrowserModule,

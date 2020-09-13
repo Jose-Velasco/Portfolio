@@ -4,8 +4,9 @@
   font-family: 'Roboto', sans-serif;
   width: 100%;
   height: 100%;
-  background-color: #212931;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(255, 255, 255, 0.144)), url(../../assets/images/backgroundRecompressed.jpg);
+  // background-color: #212931;
+  background-image: url(../../assets/images/backgroundRecompressed.jpg);
+  // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(255, 255, 255, 0.144)), url(../../assets/images/backgroundRecompressed.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -67,7 +68,6 @@ a:hover {
 
   p {
     font-weight: bold;
-
   }
 }
 

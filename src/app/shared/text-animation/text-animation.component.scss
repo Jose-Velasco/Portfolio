@@ -1,0 +1,31 @@
+.text-wrapper p {
+  font-weight: bold;
+  position: relative;
+}
+
+.text-wrapper p::after {
+  content: '';
+  position: absolute;
+  transform-origin: right;
+  bottom: 0;
+  height: 3px;
+  width: 18px;
+  margin-bottom: 3px;
+  margin-left: 3px;
+  background-color: black;
+  animation: underScoreBlink 1s step-start 0s infinite;
+
+  @keyframes underScoreBlink {
+    50% {
+      opacity: 0.0;
+    }
+  }
+}
+
+// on smaller device the p::after underScore causes
+// overflow issues on smaller devices underscore is made smaller
+@media only screen and (max-width: 375px) {
+  .text-wrapper p::after {
+    width: 7px;
+  }
+}
