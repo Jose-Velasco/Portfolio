@@ -47,7 +47,7 @@ export class ProjectsService {
         this.techIconDic.css, this.techIconDic.ubuntu
       ],
       "In this project I utilized Django, a Python web framework, to create a website for our computer science club. Using HTML and CSS Designed three pages. On the meet the officers page, I taped into Django's mode-template-view inorder to display current and past club officers. Each of the officer's picture, name and position is stored in the SQLite database using Python to manage the logic. In the projects page I incorporated pagination in order to display a set amount of projects to avoid long loading times. Additionally, each project detail view url path is created dynamically based on project id. Also, CKEditor, WYSIWYG rich text editor, was added so future club members can create new project posts without having to manually create new the page. This is also beneficial because memebers do not need to know HTML or CSS to create customizable project posts. Lastly, this prevents having to SSH into the ubuntu server for a new post or small edit to a post.",
-      "https://www.gavilancomputerscience.club/",
+      "https://www.gavcs.club/",
       "https://github.com/Jose-Velasco/cs-club-django"
     ),
     new Project(
