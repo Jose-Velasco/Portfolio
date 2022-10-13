@@ -1,0 +1,43 @@
+version: "3.9"
+services:
+  db:
+    container_name: db
+    ports:
+      - "3306"
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: apiDB
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: .
+    # volumes:
+    #   # see file-changes instantly (when developing)
+    #   - .:/skillsUSAItCode
+    command: >
+      bash -c "python manage.py migrate
+      && python manage.py createsuperuser --noinput
+      ; python manage.py runserver 0.0.0.0:8000"
+    environment:
+      DEVELOPMENT_MODE_DJANGO: ${DEVELOPMENT_MODE_DJANGO:-True}
+      DEBUG_DJANGO: ${DEBUG_DJANGO:-True}
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:-SecretDevKey}
+      DJANGO_ALLOWED_HOSTS: ${DJANGO_ALLOWED_HOSTS:-127.0.0.1,localhost,0.0.0.0}
+      DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME:-admin}
+      DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-password}
+      DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin123@adminemail123.com}
+      DATABASE_URL: ${DATABASE_URI:-mysql://root:my-secret-pw@db/apiDB}
+      PYTHONUNBUFFERED: 1
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
