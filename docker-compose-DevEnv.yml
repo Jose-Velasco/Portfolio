@@ -17,10 +17,11 @@ services:
       retries: 10
 
   api:
-    build: .
-    # volumes:
-    #   # see file-changes instantly (when developing)
-    #   - .:/skillsUSAItCode
+    build:
+      context: .
+      dockerfile: devBackend.Dockerfile
+    volumes:
+      - ./backend:/api
     command: >
       bash -c "python manage.py migrate
       && python manage.py createsuperuser --noinput
@@ -41,3 +42,17 @@ services:
       db:
         condition: service_healthy
     restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: devFrontend.Dockerfile
+    volumes:
+      - .:/app
+      - /app/app/backend/
+      - /app/node_modules/
+    command: bash -c "npm start"
+    ports:
+      - "4200:4200"
+    depends_on:
+      - "api"
