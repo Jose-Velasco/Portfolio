@@ -51,6 +51,7 @@ services:
     volumes:
       - .:/app
       - "/app/node_modules"
+      # poll needed to have angualr pick up code changes (in windows only??)
     command: bash -c "ng serve --host 0.0.0.0 --poll 1000"
     ports:
       - "4200:4200"

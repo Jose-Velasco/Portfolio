@@ -187,4 +187,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+backend/projects
+
 # End backend

@@ -82,7 +82,7 @@ export class ProjectsService {
   // finds the first featured project in the array
   // and signals the index to all projectSelected sub
   firstFeaturedProjectIndex(): void {
-    for(let index = 0; index < this.projects.length; index++) {
+    for (let index = 0; index < this.projects.length; index++) {
       if (this.projects[index].isFeatured) {
         this.projectSelected.next(index);
         break;
