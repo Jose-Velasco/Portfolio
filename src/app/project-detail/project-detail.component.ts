@@ -18,16 +18,17 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.projectSelectedSub = this.projectService.projectSelectedObserv
-      .subscribe((index: number) => {
-        this.ProjectSelectedIndex = index;
-        this.projectDetails = this.projectService.getProjectByIndex(this.ProjectSelectedIndex);
-        this.videoURL = this.projectDetails.videoId;
+      .subscribe((project: Project) => {
+        // this.ProjectSelectedIndex = index;
+        // this.projectDetails = this.projectService.getProjectByIndex(this.ProjectSelectedIndex);
+        this.projectDetails = project;
+        this.videoURL = this.projectDetails.videoURL;
         this.isLoading = false;
       });
   }
 
   ngOnDestroy() {
-    if(this.projectSelectedSub) {
+    if (this.projectSelectedSub) {
       this.projectSelectedSub.unsubscribe();
     }
   }

@@ -27,8 +27,6 @@ class Image(models.Model):
   def __str__(self) -> str:
      return filefieldFileName(self.image)
 
-
-
 class Project(models.Model):
   title = models.CharField(max_length=255)
   abstract = models.TextField(blank=True, default="")

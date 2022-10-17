@@ -5,6 +5,8 @@ services:
     ports:
       - "3306"
     image: mysql:latest
+    cap_add:
+      - SYS_NICE # CAP_SYS_NICE
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
@@ -52,7 +54,7 @@ services:
       - .:/app
       - "/app/node_modules"
       # poll needed to have angualr pick up code changes (in windows only??)
-    command: bash -c "ng serve --host 0.0.0.0 --poll 1000"
+    command: bash -c "ng serve --host 0.0.0.0 --poll 1000 --disable-host-check"
     ports:
       - "4200:4200"
     restart: unless-stopped

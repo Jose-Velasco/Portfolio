@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MediaLinks } from 'src/app/services/media-links.service';
+import { MediaLinksService } from 'src/app/services/media-links.service';
 import { MediaLink } from '../media-link.interface';
 
 @Component({
@@ -10,7 +10,7 @@ import { MediaLink } from '../media-link.interface';
 export class LinkTabsComponent implements OnInit {
   mediaLinks: MediaLink;
 
-  constructor(private mediaLinksServ: MediaLinks) { }
+  constructor(private mediaLinksServ: MediaLinksService) { }
 
   ngOnInit(): void {
     this.mediaLinks = this.mediaLinksServ.links;

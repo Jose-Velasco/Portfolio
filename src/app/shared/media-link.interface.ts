@@ -4,3 +4,7 @@ export interface MediaLink{
   email: string;
   resume: string;
 }
+
+export interface Resume {
+  pdf: string;
+}

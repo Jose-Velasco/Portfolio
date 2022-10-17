@@ -1,13 +1,13 @@
 <div class="project-detail-container">
   <div class="project-title-wraper">
     <h3>Project</h3>
-  <h1 class="project-title">{{ projectDetails.uniqueTitle }}</h1>
+  <h1 class="project-title">{{ projectDetails.title }}</h1>
   </div>
   <div class="project-tech-icons-wraper">
-    <img class="devicon" *ngFor="let icon of projectDetails.techIcons" [src]="icon">
+    <img class="devicon" *ngFor="let icon of projectDetails.skills" [src]="icon">
   </div>
   <div *ngIf="!projectDetails.hasVideo; else displayVideo" class="project-image-wraper">
-    <img [src]="projectDetails.thumbnailPicture">
+    <img [src]="projectDetails.album[0]">
   </div>
   <div *ngIf="isLoading">
     <div class="fa-3x">
@@ -26,15 +26,15 @@
     <h2>About</h2>
   </div>
   <div class="project-about-text-container">
-  <p>{{ projectDetails.about }}</p>
+  <p>{{ projectDetails.details }}</p>
   </div>
   <div class="project-btn-wraper">
     <ul class="project-code-btn-wraper">
       <li>
-        <a [href]="projectDetails.demo" target="_blank" class="display-code-btn">Demo</a>
+        <a [href]="projectDetails.demoURL" target="_blank" class="display-code-btn">Demo</a>
       </li>
       <li>
-        <a [href]="projectDetails.code" target="_blank" class="display-code-btn">Code</a>
+        <a [href]="projectDetails.codeURL" target="_blank" class="display-code-btn">Code</a>
       </li>
     </ul>
   </div>

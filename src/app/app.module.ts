@@ -13,6 +13,7 @@ import { LinkTabsComponent } from './shared/link-tabs/link-tabs.component';
 import { NavHamburgerComponent } from './shared/nav-hamburger/nav-hamburger.component';
 import { SafePipePipe } from './shared/pipes/safe-pipe.pipe';
 import { TextAnimationComponent } from './shared/text-animation/text-animation.component';
+import { HttpClientModule } from "@angular/common/http"
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { TextAnimationComponent } from './shared/text-animation/text-animation.c
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

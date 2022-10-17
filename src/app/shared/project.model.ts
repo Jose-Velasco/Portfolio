@@ -1,17 +1,23 @@
+import { Image } from "./image.interface";
+import { TechIcon } from "./tech-icon.enum";
+
 export class Project {
   constructor(
+    private _id,
+    public title: string,
+    public abstract: string,
+    public details: string,
+    public demoURL: string,
+    public codeURL: string,
+    public videoURL: string,
+    public album: Image[],
+    // public picture: string,
+    // public thumbnailPicture: string,
+    public skills: TechIcon[],
     public isFeatured: boolean,
     public hasVideo: boolean,
-    public uniqueTitle: string,
-    public abstract: string,
-    public picture: string,
-    public thumbnailPicture: string,
-    public videoId: string,
-    public techIcons: string[],
-    public about: string,
-    public demo: string,
-    public code: string
   ) {}
-}
 
+  get id() { return this._id; }
+}
 

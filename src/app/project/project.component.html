@@ -1,16 +1,16 @@
 <div class="articles-wraper">
 
-  <article *ngFor="let project of projects;" class="project-wraper">
+  <article *ngFor="let project of projects | async" class="project-wraper">
       <header class="project-header-container">
         <h1 class="project-title">{{ project.uniqueTitle }}</h1>
       </header>
       <div class="project-image-div">
-      <img [src]="project.picture" class="best-project-image" alt="">
+      <img [src]="project.album[0]" class="best-project-image" alt="">
       </div>
       <p>{{ project.abstract }}</p>
       <ul class="project-code-btn-wraper">
         <li>
-          <a (click)="onViewProject(project.uniqueTitle)" class="display-code-btn">View Project</a>
+          <a (click)="onViewProject(project)" class="display-code-btn">View Project</a>
         </li>
       </ul>
   </article>
