@@ -1,6 +1,6 @@
 from django.db import models
 from .enums import TechIcon
-from .modelUtils import get_upload_path
+from .modelUtils import get_upload_path, filefieldFileName
 
 # Create your models here.
 
@@ -24,6 +24,9 @@ class Image(models.Model):
   height = models.FloatField(default=100)
   album = models.ForeignKey(ImageAlbum, related_name='images', on_delete=models.CASCADE)
 
+  def __str__(self) -> str:
+     return filefieldFileName(self.image)
+
 
 
 class Project(models.Model):
@@ -36,10 +39,20 @@ class Project(models.Model):
   codeURL = models.URLField(blank=True, default="#")
   # maps to videoID in frontend for now
   videoURL = models.URLField(blank=True, default="#")
-  album = models.OneToOneField(ImageAlbum, related_name='model', on_delete=models.CASCADE, blank=True, null=True)
+  album = models.OneToOneField(ImageAlbum, related_name='model', on_delete=models.SET_NULL, blank=True, null=True)
   hasVideo = models.BooleanField(default=False)
   isFeatured = models.BooleanField(default=False)
 
 class Skill(models.Model):
   project = models.ForeignKey(Project, related_name="skill", on_delete=models.CASCADE)
   name = models.CharField(max_length= 100, choices=TechIcon.choices, default=TechIcon.ANGULAR)
+
+  def __str__(self) -> str:
+     return f"{self.name}"
+
+class Resume(models.Model):
+  pdf = models.FileField(upload_to="resumes")
+  showcase = models.BooleanField(default=False)
+
+  def __str__(self) -> str:
+     return filefieldFileName(self.pdf)

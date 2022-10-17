@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ImageAlbum, Project, Skill, Image
+from .models import ImageAlbum, Project, Skill, Image, Resume
 
 class SkillInLine(admin.StackedInline):
   model = Skill
@@ -22,7 +22,15 @@ class ProjectAdmin(admin.ModelAdmin):
 @admin.register(ImageAlbum)
 class ImageAlbumAdmin(admin.ModelAdmin):
   inlines = [ImageInLine]
+  list_display = ("__str__", "total_images")
+
+  def total_images(self, obj):
+    return len(obj.images.all())
 
 @admin.register(Image)
-class ImageAlbumAdmin(admin.ModelAdmin):
-  pass
+class ImageAdmin(admin.ModelAdmin):
+  list_display = ("__str__", "default")
+
+@admin.register(Resume)
+class ResumeAdmin(admin.ModelAdmin):
+  list_display = ("__str__", "showcase")
