@@ -6,8 +6,9 @@
   <div class="project-tech-icons-wraper">
     <img class="devicon" *ngFor="let icon of projectDetails.skills" [src]="icon">
   </div>
-  <div *ngIf="!projectDetails.hasVideo; else displayVideo" class="project-image-wraper">
-    <img [src]="projectDetails.album[0]">
+  <div *ngIf="!projectDetails.hasVideo; else displayVideo" class="project-image-wrapper">
+    <!-- <img [src]="projectDetails.album.images[0].image"> -->
+      <app-image-carousel [imageURLs]="projectDetails.album.images"></app-image-carousel>
   </div>
   <div *ngIf="isLoading">
     <div class="fa-3x">

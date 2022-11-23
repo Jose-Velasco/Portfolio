@@ -7,6 +7,7 @@ import { environment } from "../../environments/environment";
   providedIn: 'root'
 })
 export class MediaLinksService {
+  private readonly _baseBackendURL: string = environment.baseBackendURL;
   private readonly _backendApiURL: string = environment.backendApiURL;
   private _httpHeaders = new HttpHeaders({"Content-Type": "application/json"});
   private _links: MediaLink = {
@@ -23,7 +24,7 @@ export class MediaLinksService {
   }
 
   setLinks(newLink: string, linkToChange: "linkedin" | "github" | "email" | "resume") {
-    this._links[linkToChange] = `${this._backendApiURL}${newLink}`;
+    this._links[linkToChange] = `${this._baseBackendURL}${newLink}`;
   }
 
   fetchResumeURL() {

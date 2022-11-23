@@ -47,13 +47,15 @@ $color-primary-border: #eeeeee;
   color: #ffffff;
   font-weight: bold;
   cursor: pointer;
-  height: 10rem;
-  width: 10rem;
+  height: 8rem;
+  width: 8rem;
+  background: radial-gradient(circle,  rgba(255, 255, 255, 0.5) 0%, rgba(0,0,0,0) 75%);
 }
 
 .btn-round:hover {
   border: 2px solid $color-blue;
   color: $color-blue;
+  background: radial-gradient(circle, rgba(0,0,0,0) 0%, $color-blue 100%);
 }
 
 .btn-round::-moz-focus-inner {

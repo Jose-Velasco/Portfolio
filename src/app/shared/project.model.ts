@@ -10,7 +10,7 @@ export class Project {
     public demoURL: string,
     public codeURL: string,
     public videoURL: string,
-    public album: Image[],
+    public album: {images: Image[]},
     // public picture: string,
     // public thumbnailPicture: string,
     public skills: TechIcon[],

@@ -13,7 +13,8 @@ import { LinkTabsComponent } from './shared/link-tabs/link-tabs.component';
 import { NavHamburgerComponent } from './shared/nav-hamburger/nav-hamburger.component';
 import { SafePipePipe } from './shared/pipes/safe-pipe.pipe';
 import { TextAnimationComponent } from './shared/text-animation/text-animation.component';
-import { HttpClientModule } from "@angular/common/http"
+import { HttpClientModule } from "@angular/common/http";
+import { ImageCarouselComponent } from './shared/image-carousel/image-carousel.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HttpClientModule } from "@angular/common/http"
     NavHamburgerComponent,
     SafePipePipe,
     TextAnimationComponent,
+    ImageCarouselComponent,
   ],
   imports: [
     BrowserModule,
