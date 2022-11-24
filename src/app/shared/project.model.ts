@@ -1,4 +1,4 @@
-import { Image } from "./image.interface";
+import { Album } from "./image.interface";
 import { TechIcon } from "./tech-icon.enum";
 
 export class Project {
@@ -10,10 +10,10 @@ export class Project {
     public demoURL: string,
     public codeURL: string,
     public videoURL: string,
-    public album: {images: Image[]},
+    public album: Album,
     // public picture: string,
     // public thumbnailPicture: string,
-    public skills: TechIcon[],
+    public skills: {name: TechIcon[]},
     public isFeatured: boolean,
     public hasVideo: boolean,
   ) {}

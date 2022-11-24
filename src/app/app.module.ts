@@ -15,6 +15,7 @@ import { SafePipePipe } from './shared/pipes/safe-pipe.pipe';
 import { TextAnimationComponent } from './shared/text-animation/text-animation.component';
 import { HttpClientModule } from "@angular/common/http";
 import { ImageCarouselComponent } from './shared/image-carousel/image-carousel.component';
+import { SkillIconLocalUrlPipe } from './shared/pipes/skill-icon-local-url.pipe';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ImageCarouselComponent } from './shared/image-carousel/image-carousel.c
     SafePipePipe,
     TextAnimationComponent,
     ImageCarouselComponent,
+    SkillIconLocalUrlPipe,
   ],
   imports: [
     BrowserModule,

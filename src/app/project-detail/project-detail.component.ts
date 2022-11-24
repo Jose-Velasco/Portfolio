@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Project } from '../shared/project.model';
 import { ProjectsService } from '../services/projects.service';
 import { Subscription } from 'rxjs';
@@ -12,7 +12,7 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
   isLoading: boolean = true;
   videoURL: string;
   projectDetails: Project;
-  ProjectSelectedIndex: number;
+  projectSelectedIndex: number;
   private projectSelectedSub: Subscription;
   constructor(private projectService: ProjectsService) { }
 
