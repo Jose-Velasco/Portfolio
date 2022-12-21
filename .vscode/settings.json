@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
+        "BACKENDAPIURL",
+        "BASEBACKENDURL",
+        "BASEHREFURL",
         "corsheaders",
         "viewsets"
     ]

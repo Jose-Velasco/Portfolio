@@ -11,3 +11,8 @@ jobs:
 
       - name: Build the Docker image
         run: docker build -f prodFrontend.Dockerfile -t portfolio_frontend_build .
+        env:
+          baseHrefUrl: ${{ secrets.BASEHREFURL }}
+          baseBackendURL: ${{ secrets.BASEBACKENDURL }}
+          backendApiURL: ${{ secrets.BACKENDAPIURL }}
+
