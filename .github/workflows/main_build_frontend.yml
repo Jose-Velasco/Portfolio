@@ -1,0 +1,13 @@
+name: Build Frontend
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  build-frontend-docker-container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build the Docker image
+        run: docker build -f prodFrontend.Dockerfile -t portfolio_frontend_build .
