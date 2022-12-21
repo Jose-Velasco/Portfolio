@@ -64,7 +64,7 @@ jobs:
 
       - name: Build
         run: |
-          ng build --prod --output-path dist --base-href /Portfolio/
+          npm run build -- --prod --output-path dist --base-href /Portfolio/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
