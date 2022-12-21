@@ -23,9 +23,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-
       - name: Injecting environment Variables
         uses: actions/setup-python@v4
         with:
@@ -35,6 +32,9 @@ jobs:
           baseHrefUrl: ${{ secrets.BASEHREFURL }}
           baseBackendURL: ${{ secrets.BASEBACKENDURL }}
           backendApiURL: ${{ secrets.BACKENDAPIURL }}
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
 
       - name: Use Node.js 12.11.1
         uses: actions/setup-node@v1

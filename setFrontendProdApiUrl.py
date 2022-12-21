@@ -29,3 +29,5 @@ envProdTypeScriptFile += "};"
 f = open("src/environments/environment.prod.ts", "w")
 f.write(envProdTypeScriptFile)
 f.close()
+
+print(envProdTypeScriptFile)
