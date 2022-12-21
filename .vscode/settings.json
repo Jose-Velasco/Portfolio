@@ -4,6 +4,7 @@
         "BASEBACKENDURL",
         "BASEHREFURL",
         "corsheaders",
+        "nodemodules",
         "viewsets"
     ]
 }
