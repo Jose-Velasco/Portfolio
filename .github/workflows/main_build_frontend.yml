@@ -2,7 +2,7 @@ name: Build Frontend
 on:
   push:
     branches:
-      - "main"
+      - main
 jobs:
   build-frontend-docker-container:
     runs-on: ubuntu-latest
