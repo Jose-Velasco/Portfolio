@@ -63,7 +63,7 @@ jobs:
           npm ci
 
       - name: Build
-        run: npm run build --prod --output-path=dist --base-href=/Portfolio/
+        run: npm run build -- --prod --output-path=dist --base-href=/Portfolio/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
