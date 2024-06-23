@@ -20,33 +20,35 @@
 .project-info-box {
   visibility: hidden;
   position: fixed;
-  top: 0;
+  top: 10%;
+  left: 10%;
   width: 80vw;
   height: 100vh;
   // padding: 16px;
   z-index: 100;
-  background-color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  // border-radius: 25px;
+  background-color: transparent;
+  // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   animation-name: modal-open;
   animation-duration: 0.8s;
   animation-delay: 0.2s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  background-image: url(../../../assets/images/backgroundRecompressed.jpg);
-  background-size: cover;
-  background-repeat: repeat;
+  // background-image: url(../../../assets/images/backgroundRecompressed.jpg);
+  // background-size: cover;
+  // background-repeat: repeat;
 }
 
 @keyframes modal-open {
   from {
     visibility: hidden;
-    right: -25vw;
+    // right: -25vw;
     // transform: scaleX(0.85);
     opacity: 0.8;
   }
   to {
     visibility: visible;
-    right: 0vw;
+    // right: 0vw;
     // transform: scaleX(1);
     opacity: 1;
   }
