@@ -1,4 +1,6 @@
-# NgPortfolio
+![Frontend](https://github.com/jose-velasco/Portfolio/actions/workflows/main_build_frontend.yml/badge.svg)
+
+# Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
 
