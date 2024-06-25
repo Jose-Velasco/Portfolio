@@ -36,6 +36,13 @@ $color-primary-border: #eeeeee;
   padding: 0 2.10rem;
 }
 
+.button-hover {
+  &:hover {
+    box-shadow: inset 0 0 0 2px rgb(44, 195, 239);
+    color: $color-blue;
+  }
+}
+
 .btn-round {
   background-color: transparent;
   border: 2px solid rgba(255, 255, 255, 0.75);
