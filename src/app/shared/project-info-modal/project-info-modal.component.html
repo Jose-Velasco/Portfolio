@@ -1,7 +1,7 @@
 <div class="back-drop" (click)="onClose()"></div>
 <div class="project-info-box">
-  <app-project-detail></app-project-detail>
-  <div class="project-info-box-actions">
+  <app-project-detail (renderDefaultCloseButton)="setRenderDefaultCloseButton($event)" (closeModal)="onClose()"></app-project-detail>
+  <div class="project-info-box-actions" *ngIf="showRenderDefaultCloseButton">
     <button (click)="onClose()" type="button" class="btn-round">X</button>
   </div>
 </div>

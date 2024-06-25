@@ -35,6 +35,17 @@ hr {
   border-radius: 50%;
 }
 
+.close-btn {
+  background-color: #C30043;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  // &:hover {
+
+  // }
+}
+
 .project-content-wrapper {
   // display: flex;
   height: 94.5%;

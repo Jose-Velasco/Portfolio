@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, Renderer2, Inject, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, Renderer2, Inject, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
@@ -7,6 +7,7 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ["./project-info-modal.component.scss"]
 })
 export class ProjectInfoModalComponent implements OnInit, OnDestroy {
+  showRenderDefaultCloseButton: boolean = true;
   @Input() message: string;
   @Output() close = new EventEmitter<void>();
 
@@ -32,6 +33,15 @@ export class ProjectInfoModalComponent implements OnInit, OnDestroy {
 
   enableBodyHTMLScroll(): void {
     this.render2.removeClass(this.document.body, "ovh");
+  }
+
+  setRenderDefaultCloseButton(showRenderDefaultCloseButton: boolean) {
+    this.showRenderDefaultCloseButton = showRenderDefaultCloseButton;
+  }
+
+  @HostListener('window:keydown.escape', ['$event'])
+  handleKeyDown(event: KeyboardEvent) {
+    this.onClose();
   }
 
   ngOnDestroy() {
