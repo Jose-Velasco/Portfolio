@@ -107,8 +107,10 @@ a:hover {
 }
 
 .best-project-image {
-  width: 100%;
+  max-height: 25rem;
+  min-height: 24rem;
   display: block;
+  object-fit: contain;
 }
 
 .project-image-div {

@@ -16,6 +16,7 @@ import { TextAnimationComponent } from './shared/text-animation/text-animation.c
 import { HttpClientModule } from "@angular/common/http";
 import { ImageCarouselComponent } from './shared/image-carousel/image-carousel.component';
 import { SkillIconLocalUrlPipe } from './shared/pipes/skill-icon-local-url.pipe';
+import { TechCardComponent } from './shared/tech-card/tech-card.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SkillIconLocalUrlPipe } from './shared/pipes/skill-icon-local-url.pipe'
     TextAnimationComponent,
     ImageCarouselComponent,
     SkillIconLocalUrlPipe,
+    TechCardComponent,
   ],
   imports: [
     BrowserModule,
