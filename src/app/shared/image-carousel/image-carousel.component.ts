@@ -46,4 +46,8 @@ export class ImageCarouselComponent implements OnInit {
     }
     this.previousImage();
   }
+
+  onClickDot(index: number) {
+    this.currentImageIndex = index;
+  }
 }

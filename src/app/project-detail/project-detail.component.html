@@ -6,13 +6,34 @@
   </div>
   <hr>
   <div class="project-content-wrapper">
-    <div class="project-title-wraper">
-      <!-- <h3>Project</h3> -->
-    <h1 class="project-title">{{ projectDetails.title }}</h1>
-    </div>
-    <!-- <div class="project-tech-icons-wraper">
-      <img class="devicon" *ngFor="let icon of projectDetails.skills" [src]="icon.name | skillIconLocalUrl">
+
+    <!-- <div id="background-wrap">
+      <div class="x1">
+          <div class="cloud"></div>
+      </div>
+
+      <div class="x2">
+          <div class="cloud"></div>
+      </div>
+
+      <div class="x3">
+          <div class="cloud"></div>
+      </div>
+
+      <div class="x4">
+          <div class="cloud"></div>
+      </div>
+
+      <div class="x5">
+          <div class="cloud"></div>
+      </div>
     </div> -->
+
+
+
+    <div class="project-title-wrapper ribbon">
+      <h1 class="project-title">{{ projectDetails.title }}</h1>
+    </div>
     <div *ngIf="!projectDetails.hasVideo; else displayVideo" class="project-image-wrapper">
         <app-image-carousel [imageURLs]="projectDetails.album.images"></app-image-carousel>
     </div>
@@ -32,7 +53,6 @@
     <div class="project-main-content-wrapper">
       <div class="about-section">
         <div class="project-header-text">
-          <!-- <div class="project-divider"></div> -->
           <h2>About</h2>
         </div>
         <div class="project-about-text-container">
@@ -59,5 +79,4 @@
       </ul>
     </div>
   </div>
-
 </div>

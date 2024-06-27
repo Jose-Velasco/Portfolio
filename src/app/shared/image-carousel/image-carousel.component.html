@@ -7,6 +7,9 @@
     <button class="next-btn btn-round" (click)="onNext()">
       <i class="fa">&#xf105;</i>
     </button>
+    <div class="dots-container">
+      <button class="dot" *ngFor="let imgs of imageURLs; index as i" (click)="onClickDot(i)" [ngClass]="{'dot-selected': currentImageIndex == i}"></button>
+    </div>
   </div>
 </ng-template>
 <ng-template #noImages>
