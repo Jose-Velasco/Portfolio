@@ -20,6 +20,12 @@ a:hover {
       margin: 2rem 0;
   }
 
+  .best-project-image {
+    max-height: 25rem;
+    min-height: 24rem;
+    object-fit: contain;
+  }
+
   .display-code-btn {
       padding: 0 2.10rem;
   }
@@ -107,10 +113,8 @@ a:hover {
 }
 
 .best-project-image {
-  max-height: 25rem;
-  min-height: 24rem;
   display: block;
-  object-fit: contain;
+  width: 100%;
 }
 
 .project-image-div {

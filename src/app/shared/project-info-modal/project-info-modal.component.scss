@@ -20,7 +20,7 @@
 .project-info-box {
   visibility: hidden;
   position: fixed;
-  top: 10%;
+  top: 5%;
   left: 10%;
   width: 80vw;
   height: 100vh;
@@ -84,6 +84,9 @@
   // cover the whole screen
   .project-info-box {
     width: 100vw;
+    height: 125%;
+    top: 0%;
+    left: 0%;
   }
 
   .project-info-box-actions {

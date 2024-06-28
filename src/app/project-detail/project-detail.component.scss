@@ -22,6 +22,7 @@
 hr {
   border-top: 1px solid #383838;
   margin-bottom: 0;
+  width: 100%;
 }
 
 .project-circle-containers {
@@ -52,12 +53,12 @@ hr {
 }
 
 .ribbon {
-  font-size: 28px;
+  font-size: 18px;
   font-weight: bold;
   color: #fff;
 }
 .ribbon {
-  --s: 1.8em; /* the ribbon size */
+  --s: 1em; /* the ribbon size */
   --d: .8em;  /* the depth */
   --c: .8em;  /* the cutout part */
 
@@ -119,7 +120,7 @@ hr {
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  padding: 3rem 6.5rem 3rem 6.5rem;
+  padding: 0.8rem 0.8rem 0.8rem 0.8rem;
   box-shadow: 4px 4px 30px 2px #888888;
 
   // img {
@@ -129,17 +130,15 @@ hr {
 }
 
 .project-main-content-wrapper {
-  // background-color: red;
-
   border-radius: 25px;
-  margin: 3.5rem 10% 3.5rem 10%;
+  margin: 3.5rem 5% 3.5rem 5%;
   box-shadow: 4px 4px 30px 2px #888888;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 0.2fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  padding: 2rem;
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  // grid-template-rows: 0.2fr;
+  // grid-column-gap: 0px;
+  // grid-row-gap: 0px;
+  padding: 1.5rem;
   overflow-y: hidden;
 }
 
@@ -178,11 +177,11 @@ hr {
 .tech-cards-container {
   grid-area: 2 / 2 / 3 / 3;
   overflow-y: auto;
-  padding: 1rem;
+  padding: 1rem 0rem 0rem 0rem;
   max-height: 28rem;
   & > * {
     /* top | right | bottom | left */
-    margin: 0rem 0rem 0rem 1.4rem;
+    margin: 0rem 0rem 0rem 1rem;
     display: inline-block;
     padding-bottom: 1rem;
   }
@@ -201,17 +200,22 @@ hr {
 }
 
 // desktop view
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) { // desktop view
   .project-detail-container {
     display: block;
+    height: 90%;
     // box-shadow: inset 0 0 80px $color-blue;
+  }
+
+  .ribbon {
+    font-size: 28px;
+    --s: 1.8em; /* the ribbon size */
   }
 
   .project-title-wraper {
     h3 {
       font-size: 1rem;
     }
-
     .project-title {
       font-size: 3rem;
     }
@@ -225,6 +229,7 @@ hr {
     // overflow-y: hidden;
     margin: auto;
     width: 55%;
+    padding: 3rem 6.5rem 3rem 6.5rem;
 
     // img {
     //   max-height: 70vh;
@@ -241,6 +246,15 @@ hr {
     height: 90%;
   }
 
+  .project-main-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 3.5rem 10% 3.5rem 10%;
+    padding: 2rem;
+  }
 
   .project-header-text h2 {
     font-size: 1.5rem;
@@ -255,6 +269,10 @@ hr {
     }
   }
 
+  .tech-cards-container {
+    margin: 0rem 0rem 0rem 1.4rem;
+    padding: 1rem;
+  }
   .project-code-btn-wraper {
     vertical-align: middle;
     padding: 1rem;
@@ -264,7 +282,7 @@ hr {
   }
 }
 
-// test
+// test animation
 
 // body {
 // 	background: #00b4ff;
