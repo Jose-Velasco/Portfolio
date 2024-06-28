@@ -1,11 +1,10 @@
 <div class="articles-wraper">
-
   <article *ngFor="let project of projects | async" class="project-wraper">
       <header class="project-header-container">
         <h1 class="project-title">{{ project.title }}</h1>
       </header>
       <div class="project-image-div">
-      <img [src]="project.album.thumbnail" class="best-project-image" alt="">
+        <img [src]="project.album.thumbnail" class="best-project-image" alt="">
       </div>
       <p>{{ project.abstract }}</p>
       <ul class="project-code-btn-wraper">
