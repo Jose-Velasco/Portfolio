@@ -2,7 +2,7 @@ from django.db import models
 from .enums import TechIcon
 from .modelUtils import get_upload_path, filefieldFileName
 
-# Create your models here.
+from ordered_model.models import OrderedModel
 
 class ImageAlbum(models.Model):
   name = models.CharField(blank=True, max_length=255)
@@ -27,7 +27,7 @@ class Image(models.Model):
   def __str__(self) -> str:
      return filefieldFileName(self.image)
 
-class Project(models.Model):
+class Project(OrderedModel):
   title = models.CharField(max_length=255)
   abstract = models.TextField(blank=True, default="")
   # maps to about for now
