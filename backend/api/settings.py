@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "backend",
+    "ordered_model",
 ]
 
 MIDDLEWARE = [

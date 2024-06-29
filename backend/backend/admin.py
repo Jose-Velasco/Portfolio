@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import ImageAlbum, Project, Skill, Image, Resume
+from ordered_model.admin import OrderedModelAdmin
 
 class SkillInLine(admin.StackedInline):
   model = Skill
@@ -11,9 +12,9 @@ class ImageInLine(admin.TabularInline):
 
 # Register your models here.
 @admin.register(Project)
-class ProjectAdmin(admin.ModelAdmin):
+class ProjectAdmin(OrderedModelAdmin):
   inlines = [SkillInLine]
-  list_display = ("title", "abstract")
+  list_display = ("title", "abstract", "order", "move_up_down_links")
 
 @admin.register(Skill)
 class ProjectAdmin(admin.ModelAdmin):
