@@ -16,6 +16,7 @@ import { Project } from '../shared/project.model';
 export class HomeComponent implements OnInit, OnDestroy {
   isMobileView: boolean = false;
   isHamburgerToggled: boolean = false;
+  isLoadingProjects: boolean = true;
   @ViewChild(PlaceholderDirective) projectInfoModalHost: PlaceholderDirective;
   private closeSub: Subscription;
   private mobileViewSub: Subscription;
@@ -93,6 +94,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     return this.projectsService.fetchProject().subscribe(data => {
       this.projectsService.setProjects(data);
       // console.log(this.projectsService.getProjects());
+      this.isLoadingProjects = false;
     });
   }
 
