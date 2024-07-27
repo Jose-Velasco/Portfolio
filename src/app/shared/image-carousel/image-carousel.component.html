@@ -1,10 +1,13 @@
 <ng-template [ngIf]="imageURLs.length !== 0" [ngIfElse]="noImages">
   <div class="container">
     <img [src]="imageURLs[currentImageIndex]?.image">
-    <button class="previous-btn btn-round " (click)="onPrevious()">
+    <button class="btn-round carousel-btn img-full-screen-btn">
+      <i class="fa">&#xf0b2;</i>
+    </button>
+    <button class="carousel-btn previous-btn btn-round " (click)="onPrevious()">
       <i class="fa">&#xf104;</i>
     </button>
-    <button class="next-btn btn-round" (click)="onNext()">
+    <button class="carousel-btn next-btn btn-round" (click)="onNext()">
       <i class="fa">&#xf105;</i>
     </button>
     <div class="dots-container">
