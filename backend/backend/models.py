@@ -1,5 +1,5 @@
 from django.db import models
-from .enums import TechIcon
+# from .enums import TechIcon
 from .modelUtils import get_upload_path, filefieldFileName
 
 from ordered_model.models import OrderedModel
@@ -27,6 +27,17 @@ class Image(models.Model):
   def __str__(self) -> str:
      return filefieldFileName(self.image)
 
+# drop table backend_project_tech_skills;
+# ALTER TABLE backend_skill ADD COLUMN project_id BIGINT;
+# ALTER TABLE backend_skill DROP COLUMN imageURL;
+class Skill(models.Model):
+  # project = models.ForeignKey(Project, related_name="skill", on_delete=models.CASCADE)
+  name = models.CharField(max_length= 100, unique=True)
+  imageURL = models.URLField(default="#")
+
+  def __str__(self) -> str:
+     return f"{self.name}"
+
 class Project(OrderedModel):
   title = models.CharField(max_length=255)
   abstract = models.TextField(blank=True, default="")
@@ -40,13 +51,10 @@ class Project(OrderedModel):
   album = models.OneToOneField(ImageAlbum, related_name='model', on_delete=models.SET_NULL, blank=True, null=True)
   hasVideo = models.BooleanField(default=False)
   isFeatured = models.BooleanField(default=False)
-
-class Skill(models.Model):
-  project = models.ForeignKey(Project, related_name="skill", on_delete=models.CASCADE)
-  name = models.CharField(max_length= 100, choices=TechIcon.choices, default=TechIcon.ANGULAR)
+  tech_skills = models.ManyToManyField(Skill, related_name='projects')
 
   def __str__(self) -> str:
-     return f"{self.name}"
+     return f"{self.title}"
 
 class Resume(models.Model):
   pdf = models.FileField(upload_to="resumes")
