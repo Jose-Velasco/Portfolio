@@ -1,5 +1,5 @@
 import { Album } from "./image.interface";
-import { TechIcon } from "./tech-icon.enum";
+import { TechIcon } from "./tech-icon.interface";
 
 export class Project {
   constructor(
@@ -13,7 +13,7 @@ export class Project {
     public album: Album,
     // public picture: string,
     // public thumbnailPicture: string,
-    public skills: {name: TechIcon[]},
+    public tech_skills: TechIcon[],
     public isFeatured: boolean,
     public hasVideo: boolean,
   ) {}
