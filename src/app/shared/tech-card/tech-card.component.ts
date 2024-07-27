@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TechIcon } from '../tech-icon.enum';
+import { TechIcon } from '../tech-icon.interface';
 
 @Component({
   selector: 'app-tech-card',
@@ -7,7 +7,7 @@ import { TechIcon } from '../tech-icon.enum';
   styleUrls: ['./tech-card.component.scss']
 })
 export class TechCardComponent implements OnInit {
-  @Input() iconName: TechIcon;
+  @Input() icon: TechIcon;
 
   constructor() { }
 

@@ -29,7 +29,7 @@ class SkillSerializer(serializers.ModelSerializer):
 class ProjectSerializer(serializers.ModelSerializer):
   images = ImageSerializer(many=True, read_only=True)
   album = ImageAlbumSerializer()
-  # skills = SkillSerializer(many=True, read_only=True, source="skill")
+  tech_skills = SkillSerializer(many=True, read_only=True)
   class Meta:
     model = Project
     # fields = ("title", "abstract", "details", "demoURL", "codeURL", "videoURL", "hasVideo", "isFeatured", "images", "album", "skills")

@@ -44,7 +44,7 @@ export class ProjectsService {
         project.codeURL,
         project.videoURL,
         project.album,
-        project.skills,
+        project.tech_skills,
         project.isFeatured,
         project.hasVideo
         );
