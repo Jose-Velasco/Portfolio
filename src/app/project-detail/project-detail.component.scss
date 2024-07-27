@@ -4,20 +4,9 @@
   position: relative;
   height: 80%;
   display: flex;
-  // overflow: auto;
-  // overflow-y:hidden;
   overflow: hidden;
   flex-direction: column;
-  // padding: 10px;
-  // padding-top: 10px;
-  // padding-left: 4px;
-  // padding-right: 4px;
-  // padding-bottom: 20px;
-  // background-color: rgba(255, 255, 255, 0.4);
-  // box-shadow: inset 0px 0px 15px 5px $color-blue;
-  // box-shadow: inset 0 0 20px $color-blue;
   border-radius: 25px;
-  // background-color: $color-blue;
   background-color: transparent;
 }
 
@@ -29,7 +18,6 @@ hr {
 }
 
 .project-circle-containers {
-  // width: 5rem;
   width: 100%;
   display: flex;
   // justify-content: space-evenly;
@@ -87,7 +75,6 @@ hr {
 }
 
 .project-title-wrapper {
-  // margin: 0 auto;
   margin: 2.5rem auto 3rem auto;
 
   .project-title {
@@ -138,21 +125,12 @@ hr {
   box-shadow: 4px 4px 30px 2px #888888;
   z-index: 5;
   background-color: #fff;
-  // img {
-  //   max-height: auto;
-  //   max-width: 50%;
-  // }
 }
 
 .project-main-content-wrapper {
   border-radius: 25px;
   margin: 3.5rem 5% 3.5rem 5%;
   box-shadow: 4px 4px 30px 2px #888888;
-  // display: grid;
-  // grid-template-columns: repeat(2, 1fr);
-  // grid-template-rows: 0.2fr;
-  // grid-column-gap: 0px;
-  // grid-row-gap: 0px;
   padding: 1.5rem;
   overflow-y: hidden;
   z-index: 5;
@@ -164,17 +142,7 @@ hr {
 .project-header-text {
   font-weight: bold;
   color: $color-secondary-text;
-  // text-align: center;
   grid-area: 1 / 1 / 2 / 3;
-
-  // .project-divider {
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   width: 64%;
-  //   height: 1px;
-  //   margin-top: 2rem;
-  //   background-color: #bebebe;
-  // }
 }
 
 .project-about-text-container {
@@ -249,15 +217,10 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    // overflow: hidden;
-    // overflow-y: hidden;
     margin: auto;
     width: 55%;
     padding: 3rem 6.5rem 3rem 6.5rem;
-
-    // img {
-    //   max-height: 70vh;
-    // }
+    min-height: 35rem;
   }
 
   .project-video-wraper {
