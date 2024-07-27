@@ -9,6 +9,7 @@ import { Image } from '../image.interface';
 export class ImageCarouselComponent implements OnInit {
   @Input() imageURLs: Image[];
   currentImageIndex: number;
+  isImgFullScreen: boolean = false;
 
   constructor() {
     this.currentImageIndex = 0;
@@ -49,5 +50,13 @@ export class ImageCarouselComponent implements OnInit {
 
   onClickDot(index: number) {
     this.currentImageIndex = index;
+  }
+
+  enableFullScreen() {
+    this.isImgFullScreen = true;
+  }
+
+  disableFullScreen() {
+    this.isImgFullScreen = false;
   }
 }

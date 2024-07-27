@@ -1,7 +1,7 @@
 <ng-template [ngIf]="imageURLs.length !== 0" [ngIfElse]="noImages">
   <div class="container">
     <img [src]="imageURLs[currentImageIndex]?.image">
-    <button class="btn-round carousel-btn img-full-screen-btn">
+    <button class="btn-round carousel-btn img-full-screen-btn" (click)="enableFullScreen()">
       <i class="fa">&#xf0b2;</i>
     </button>
     <button class="carousel-btn previous-btn btn-round " (click)="onPrevious()">
@@ -13,6 +13,13 @@
     <div class="dots-container">
       <button class="dot" *ngFor="let imgs of imageURLs; index as i" (click)="onClickDot(i)" [ngClass]="{'dot-selected': currentImageIndex == i}"></button>
     </div>
+  </div>
+  <div class="full-screen-container" *ngIf="isImgFullScreen">
+    <div class="backdrop" (click)="disableFullScreen()"></div>
+    <button class="btn-round carousel-btn img-full-screen-btn img-full-screen-close-btn" (click)="disableFullScreen()">
+      <i class="fa">&#xf00d;</i>
+    </button>
+    <img [src]="imageURLs[currentImageIndex]?.image">
   </div>
 </ng-template>
 <ng-template #noImages>
